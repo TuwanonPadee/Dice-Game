@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "MrsSheppards";
+  src: url("Fonts\MrsSheppards-Regular.ttf");
+}
+
+section > h1 {
+  font-family: "MrsSheppards", sans-serif;
+}
