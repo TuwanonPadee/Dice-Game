@@ -10,7 +10,7 @@ body {
 
 h1,
 h2 {
-  font-size: 7rem;
+  font-size: clamp(5rem, 1vw, 7rem);
   font-style: italic;
 }
 
@@ -30,18 +30,16 @@ h2 {
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5em;
+  gap: 5rem;
 }
 
 .one-player,
 .one-dice {
   grid-column: 2;
-  grid-row: 1;
 }
 .two-player,
 .two-dice {
   grid-column: 4;
-  grid-row: 1;
 }
 
 .one-dice,
@@ -61,4 +59,21 @@ h2 {
   background-color: #ffafcc;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1;
+  }
+
+  .one-player,
+  .two-player,
+  .one-dice,
+  .two-dice {
+    grid-column: 2;
+  }
+
+  .two-dice {
+    grid-row: 4;
+  }
 }
